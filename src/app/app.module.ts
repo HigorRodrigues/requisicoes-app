@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './components/public/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 const firebase = [
   AngularFireModule.initializeApp(environment.firebase),
@@ -15,12 +17,14 @@ const firebase = [
 ]
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    FormsModule,
     ...firebase
   ],
   providers: [],
