@@ -7,7 +7,7 @@ import firebase from 'firebase/app';
   providedIn: 'root'
 })
 export class AuthenticationService {
-
+  
   private user: Observable<firebase.User>;
 
   constructor(private afAuth: AngularFireAuth) {
@@ -24,5 +24,9 @@ export class AuthenticationService {
 
   resetPassword(email: string){
     return this.afAuth.sendPasswordResetEmail(email);
+  }
+
+  authUser(): Observable<firebase.User> {
+   return this.user;
   }
 }
