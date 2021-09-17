@@ -15,7 +15,7 @@
                         <label for="email">E-mail</label>
                         <input id="email" class="form-control" name="emailControle" #emailControle="ngModel" 
                         type="text" placeholder="Informe Email" [(ngModel)]="email" maxlength="60"
-                        email required>
+                        email required autocomplete="off">
                         <div *ngIf="emailControle.invalid" class="text-danger">
                             <div *ngIf="emailControle.errors.required">E-mail é obrigatório</div>                            
                             <div *ngIf="emailControle.errors.email">E-mail inválido</div>
@@ -38,7 +38,7 @@
                       <button type="submit" (click)="enviarLink()" class="btn btn-success btn-block text-uppercase">
                         <i class="fa fa-envelope"> Recuperar </i>
                       </button>                        
-                    </div>
+                    </div>                    
                   </fieldset>
                   <br>
                   <div class="alert alert-dismissible alert-danger" *ngIf="mensagem && !emailEnviado">
