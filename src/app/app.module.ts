@@ -20,7 +20,7 @@ const firebase = [
   declarations: [
     AppComponent,
     LoginComponent,
-    MenuComponent
+    MenuComponent,    
   ],
   imports: [
     BrowserModule,
@@ -29,7 +29,7 @@ const firebase = [
     FormsModule,
     ...firebase
   ],
-  providers: [],
+  providers: [],  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
