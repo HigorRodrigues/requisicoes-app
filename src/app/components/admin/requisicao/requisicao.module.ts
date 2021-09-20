@@ -1,14 +1,21 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
+import { ComumModule } from 'src/app/modules/comum.module';
 import { RequisicaoRoutingModule } from './requisicao-routing.module';
+import { RequisicaoComponent } from './requisicao.component';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    RequisicaoComponent
+  ],
   imports: [
-    CommonModule,
-    RequisicaoRoutingModule
+    RequisicaoRoutingModule,
+    ComumModule,
+    NgSelectModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class RequisicaoModule { }
